@@ -1,18 +1,20 @@
 #load("data/mydata.RData")
-internalfunC1<-function(v){
-  mytab <- NULL
-  data("mydata",package="yuimaStable")
-  myfun<-approxfun(x=mytab[,1],y=mytab[,2])
-  return(myfun(v))
-}
-internalfunC2<-function(v){
-  mytab <- NULL
-  data("mydata",package="yuimaStable")
-  myfun<-approxfun(x=mytab[,1],y=mytab[,3])
-  return(myfun(v))
-}
+# internalfunC1<-function(v){
+#   mytab <- NULL
+#   data("mydata",package="yuimaStable")
+#   myfun<-approxfun(x=mytab[,1],y=mytab[,2])
+#   return(myfun(v))
+# }
+# internalfunC2<-function(v){
+#   mytab <- NULL
+#   data("mydata",package="yuimaStable")
+#   myfun<-approxfun(x=mytab[,1],y=mytab[,3])
+#   return(myfun(v))
+# }
 
-
+load("data/mydata.RData")
+internalfunC2<-approxfun(x=mytab[,1],y=mytab[,3])
+internalfunC1<-approxfun(x=mytab[,1],y=mytab[,2])
 internal_minuslog_stable <- function(par, Xt, A_coef, C_coef, h, Nint, 
       N, N_al, N_gam, aa=NULL,nodes,logw, W=W,parallel = F,dens=NULL,
       pos=75, posInt=1, num_of_cores=1, aa_alter=NULL){
