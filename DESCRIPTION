@@ -1,0 +1,16 @@
+Package: yuimaStable
+Type: Package
+Title: yuimaStable: Simulation and Estimation of Stochastic Differentiol equation with a locally stable Levy process
+Version: 1.0
+Date: 2024-07-03
+Author: YUIMA Project Team
+Maintainer: Lorenzo Mercuri <lorenzo.mercuri@unimi.it>
+Description: This package is an extension of the yuima package and provides a fast and efficient implementation 
+             of the quasi-stable likelihood estimation procedure. The implementation involves gauss-like quadrature methods
+             for an efficient and accurate evaluation of the stable density that is the main block for the construction of 
+             the estimation procedure. 
+License: GPL-2
+URL: https://yuimaproject.com
+Depends: R (>= 3.5.0), yuima, calculus, Ryacas0, foreach, statmod, doParallel, parallel, methods, zoo
+Imports: Rcpp (>= 1.0.10)
+LinkingTo: Rcpp, RcppArmadillo
